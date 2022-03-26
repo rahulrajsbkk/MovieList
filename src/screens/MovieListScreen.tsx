@@ -176,5 +176,6 @@ const styles = StyleSheet.create({
   listFooterComponentStyle: {
     justifyContent: 'center',
     alignItems: 'center',
+    paddingBottom: 60,
   },
 });
