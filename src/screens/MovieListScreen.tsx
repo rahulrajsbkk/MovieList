@@ -6,6 +6,7 @@ import {
   View,
   Text,
   ImageProps,
+  ActivityIndicator,
 } from 'react-native';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {WToast} from 'react-native-smart-tip';
@@ -109,6 +110,10 @@ const MovieListScreen = () => {
         keyExtractor={(item, i) => `${i}${item.name}`}
         onEndReached={loadMore}
         onEndReachedThreshold={0.1}
+        ListFooterComponentStyle={styles.listFooterComponentStyle}
+        ListFooterComponent={
+          isLoading ? <ActivityIndicator size="small" color="#fff" /> : null
+        }
       />
     </View>
   );
@@ -167,5 +172,9 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: 'white',
     fontFamily: themeData.FONT_SEMI_REGULAR,
+  },
+  listFooterComponentStyle: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
