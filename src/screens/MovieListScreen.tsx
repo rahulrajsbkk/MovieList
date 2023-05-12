@@ -63,6 +63,12 @@ const MovieListScreen = () => {
         return require('../assets/images/poster5.jpg');
       case 'poster6.jpg':
         return require('../assets/images/poster6.jpg');
+      case 'poster7.jpg':
+        return require('../assets/images/poster7.jpg');
+      case 'poster8.jpg':
+        return require('../assets/images/poster8.jpg');
+      case 'poster9.jpg':
+        return require('../assets/images/poster9.jpg');
       default:
         return require('../assets/images/placeholder_for_missing_posters.png');
     }
